@@ -17,13 +17,13 @@ axios.interceptors.response.use(
 export default {
   getTasks: async () => {
     try{
-      const result = await axios.get(`${process.env.REACT_APP_apiUrl}/items`)    
-      // return result.data;
-      return Array.isArray(result.data) ? result.data : result.data.tasks || [];
+      const result = await axios.get(`/items`)    
+      return result.data;
+      //return Array.isArray(result.data) ? result.data : result.data.tasks || [];
     }catch (error) {
       console.error('Failed to fetch tasks:', error);
-      // throw error;
-      return [];
+      throw error;
+      //return [];
     }
   },
 
