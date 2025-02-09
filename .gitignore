@@ -3,7 +3,6 @@ node_modules/
 
 # בניות
 dist/
-build/
 
 # קבצי מערכת
 .DS_Store
